@@ -1,0 +1,7 @@
+div.u-console {width:100%; height:400px; position: relative; margin-bottom:50px;}
+div.u-console textarea#consoleLog {width:100%; height:400px; position: relative;top:0; left:0; padding-bottom:20px;}
+div.u-console div.u-console-command {position: absolute; padding:0 5px; bottom:-20px; left:0; width:100%; border-top:1px solid black; color:#000;}
+div.u-console div.u-console-login {float: left; margin-top:3px;}
+div.u-console .u-input-cmd {float: left; border:none; width:90%;margin-left: 4px; padding:3px;}
+div.u-console .u-input-send {right: 0; display: block; position: absolute;}
+div.u-batch textarea#batchCmd {width:100%; height:300px;}
