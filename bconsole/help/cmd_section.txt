@@ -1,0 +1,19 @@
+DESCRIPTION
+Control sections of the site. Creating new partitions, delete existing ones. It is possible to edit the existing sections.
+
+SYNTAX
+section create [name] [-param1=value1 -param2="value2"]
+section delete [name] -confirm=delete
+section move [source_name] -to=[dest_name]
+section update [name] [-param1=value1 -param2="value2"]
+
+PARAMS
+-title	Title of the new section
+-content	Content of the new section
+-keywords	Keywords for new section
+-description	Description for new section
+-confirm	Set the value of this parameter is "delete" to confirm deletion of section
+
+EXAMPLE
+section create news -title="Title of the new section" -content="Hello World" -keywords="news,page,section" -description="This is news section"
+section delete news -confirm=delete

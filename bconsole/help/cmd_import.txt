@@ -1,0 +1,2 @@
+DESCRIPTION
+Import batch file from the server. If file not found return error.

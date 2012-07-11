@@ -1,0 +1,7 @@
+<?
+$sSectionName = "#TITLE#";
+
+$arDirProperties = Array(
+	#PROPERTY_ARRAY#
+);
+?>
