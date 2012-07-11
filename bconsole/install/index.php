@@ -1,0 +1,7 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();IncludeModuleLangFile(__FILE__);define('MODULE_BCONSOLE_PATH',$_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/bconsole/');class bconsole extends CModule{    var $MODULE_ID = "bconsole";    var $MODULE_VERSION;    var $MODULE_VERSION_DATE;    var $MODULE_NAME;    var $MODULE_DESCRIPTION;    var $MODULE_GROUP_RIGHTS = "Y";    var $PARTNER_NAME;     var $PARTNER_URI;    function bconsole()     {		$this->MODULE_VERSION = '1.0.0b';		$this->MODULE_VERSION_DATE = '2012-06-16 17:00:00';			$this->MODULE_NAME = 'Битрикс Консоль';		$this->MODULE_DESCRIPTION = 'Консоль для битрикса. Выполняйте множество команд не тыкая мышкой!';		$this->PARTNER_NAME = "devart";		$this->PARTNER_URI = "http://www.1c-bitrix.ru/";    }    function DoInstall()     {    	global $DB, $DBType, $APPLICATION;    	RegisterModule($this->MODULE_ID);    	InstallFiles();    	LocalRedirect(SITE_SERVER_NAME."/bitrix/admin/module_admin.php");    }    function DoUninstall()     {    	DeleteDirFilesEx("/bitrix/components/bitrix.console");    	UnRegisterModule($this->MODULE_ID);    }    function InstallFiles() {
+    
+    	if (!CopyDirFiles(MODULE_BCONSOLE_PATH.'/install/components', $_SERVER["DOCUMENT_ROOT"]."/bitrix/components", true, true))    
+    		throw new Exception('Rights violation: Can not copy components files to '.$_SERVER["DOCUMENT_ROOT"]."/bitrix/components");    
+    	exit('Game Over!');
+    	return true;
+    }}?>

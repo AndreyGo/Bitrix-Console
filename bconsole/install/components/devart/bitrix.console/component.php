@@ -1,0 +1,5 @@
+<?php 
+
+
+$this->IncludeComponentTemplate();
+?>
